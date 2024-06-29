@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sales Report</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: url('background2/background8.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .sales-report {
+            margin-bottom: 20px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .print-button {
+            text-align: center;
+        }
+        .print-button button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Sales Report</h2>
+
+       
+        <div class="sales-report">
+            <p>Total Sales: $10,000</p>
+            <p>Items Sold: 500</p>
+            <p>Average Sale: $20</p>
+        </div>
+
+        
+        <div class="print-button">
+            <button onclick="window.print()">Print Report</button>
+        </div>
+    </div>
+</body>
+</html>

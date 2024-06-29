@@ -1,0 +1,87 @@
+[
+    {
+        "id": 1,
+        "name": "asam laksa",
+        "price": 5.30,
+        "image": "/images/asam laksa.webp"
+    },
+    {
+        "id": 2,
+        "name": "banana leaf rice",
+        "price": 5.20,
+        "image": "/images/banana leaf rice.jpg"
+    },
+    {
+        "id": 3,
+        "name": "beef rendang",
+        "price": 9.50,
+        "image": "/images/beef rendang.jpg"
+    }
+    ,
+    {
+        "id": 4,
+        "name": "char kuey teow",
+        "price": 5.50,
+        "image": "/images/Char_Kuey_Teow.jpeg"
+    },
+    {
+        "id": 5,
+        "name": "curry laksa",
+        "price": 5.50,
+        "image": "/images/Curry-Laksa.jpg"
+    },
+    {
+        "id": 6,
+        "name": "kaya toast",
+        "price": 3.40,
+        "image": "/images/kaya toast.jpg"
+    },
+    {
+        "id": 7,
+        "name": "maggi mee goreng",
+        "price": 3.40,
+        "image": "/images/maggi mee goreng.png"
+    },
+    {
+        "id": 8,
+        "name": "murtabak",
+        "price": 4.50,
+        "image": "/images/murtabak.jpg"
+    },
+    {
+        "id": 9,
+        "name": "nasi lemak",
+        "price": 5.50,
+        "image": "/images/nasi lemak.jpg"
+    },
+    {
+        "id": 10,
+        "name": "nasi goreng kampung",
+        "price": 5.60,
+        "image": "/images/Nasi_Goreng_Kampung.jpg"
+    },
+    {
+        "id": 11,
+        "name": "pan mee",
+        "price": 6.20,
+        "image": "/images/pan mee.jpg"
+    },
+    {
+        "id": 12,
+        "name": "roti canai",
+        "price": 3.30,
+        "image": "/images/Roti-canai.jpg"
+    },
+    {
+        "id": 13,
+        "name": "satay",
+        "price": 3.50,
+        "image": "/images/satay.jpg"
+    },
+    {
+        "id": 14,
+        "name": "yong tau foo",
+        "price": 6.50,
+        "image": "/images/yong tau foo.jpg"
+    }
+]

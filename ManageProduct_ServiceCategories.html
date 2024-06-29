@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manage Product/Service Categories</title>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            background: url('background2/background5.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            color: #007bff;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            font-weight: bold;
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .form-group input[type="text"],
+        .form-group input[type="submit"] {
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            width: 100%;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Manage Product/Service Categories</h2>
+        
+        <!-- Add Category Form -->
+        <form id="addCategoryForm">
+            <h3 style="font-family: 'Times New Roman', Times, serif;">Add Category</h3>
+            <div class="form-group">
+                <label for="categoryName" style="font-family: 'Times New Roman', Times, serif;">Category Name:</label>
+                <input type="text" id="categoryName" name="categoryName" required style="font-family: 'Times New Roman', Times, serif;">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add Category" style="font-family: 'Times New Roman', Times, serif;">
+            </div>
+        </form>
+        
+        <!-- Category List -->
+        <h3 style="font-family: 'Times New Roman', Times, serif;">Category List</h3>
+        <table id="categoryTable">
+            <thead>
+                <tr>
+                    <th>Category Name</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody id="categoryList">
+                <!-- Categories will be dynamically added here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>

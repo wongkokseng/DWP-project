@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            background: url('background2/contact.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .contact {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align:left;
+            color: #150101;
+        }
+
+        .contact-form, .map-container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(228, 194, 194, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .contact-form h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-form p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-form form {
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #211d1d;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form .btn {
+            width: 50%;
+            background-color: #6c61e9;
+            color: rgb(249, 244, 244);
+            border: none;
+            padding: 12px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form .btn:hover {
+            background-color: #474155;
+            color: rgb(77, 77, 133);
+        }
+
+        .contact-form .back-home {
+            margin-top: 180px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #6c61e9;
+            padding: 10px 20px; 
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .contact-form .back-home:hover {
+            background-color: #474155;
+        }
+
+        .map-container {
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 100;
+            height: 620px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+
+        .contact-form h2 {
+            font-size: 1.5rem; 
+            text-align: left; 
+        }
+
+        .contact-form p {
+            font-size: 1rem; 
+            text-align: left; 
+            margin-bottom: 15px; 
+        }
+    </style>
+</head>
+<body>
+    <div class="contact">
+        <div class="container">
+            <div class="contact-form">
+                <h1>Contact <span>Us</span></h1>
+                <p>If you have any inquiries or feedback, feel free to contact us via the following methods. We're here to help!</p>
+                <form action="#" method="POST">
+                    <h2>Hotline</h2>
+                    <p>Our phone is 012-3456789, you can via phone number or whatsapp to cotact us .</p>
+                    <h2>Customer Support Email</h2> 
+                    <p>Our gmail is wong123@gmail.com, you also can via gmail to contact us to feedback or ask any question.</p>  
+                </form>
+                <a href="MainPage.html" class="back-home">Back Home</a> 
+            </div>
+            <div class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.7436995704697!2d102.27353867496792!3d2.249493497730698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1e56b9710cf4b%3A0x66b6b12b75469278!2z6ams5YWt55Sy5aSa5aqS5L2T5aSn5a2m!5e0!3m2!1szh-CN!2smy!4v1718349675886!5m2!1szh-CN!2smy" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
