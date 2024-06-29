@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flash Food Delivery</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            height: 100vh;
+            background: url('background2/background10.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            background-position: center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            font-size: 1rem;
+        }
+
+        a:hover {
+            color: orange;
+        }
+
+        header {
+            position: relative;
+            padding: 2rem;
+        }
+
+        .navbar {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.499);
+            height: 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-left: -300px; 
+        }
+
+        .navbar .links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .navbar .links li a {
+            text-transform: uppercase;
+            font-size: 1.2rem; 
+            font-weight: bold;
+        }
+
+        .navbar .toggle_btn {
+            color: black;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: none;
+        }
+
+        .action_btn {
+            background-color: rgb(245, 170, 32);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border: none;
+            outline: none;
+            border-radius: 20px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            cursor: pointer;
+            transition: scale 0.2s ease;
+        }
+
+        .action_btn:hover {
+            scale: 1.05;
+            color: #d08c8c;
+        }
+
+        .action_btn:active {
+            scale: 0.95;
+        }
+
+        .dropdown_menu {
+            position: absolute;
+            right: 2rem;
+            top: 60px;
+            height: 0;
+            width: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(15px);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: white;
+            transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .dropdown_menu.open {
+            height: 240px;
+        }
+
+        .dropdown_menu li {
+            padding: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dropdown_menu .action_btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        section#hero {
+            height: calc(100vh - 60px);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: black;
+            font-size: 1.2rem;
+        }
+
+        #hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.rem;
+        }
+
+        @media (max-width: 992px) {
+            .navbar .links,
+            .navbar .action_btn {
+                display: none;
+            }
+
+            .navbar .toggle_btn {
+                display: block;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .dropdown_menu {
+                left: 2rem;
+                width: unset;
+            }
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between; 
+            align-items: center; 
+        }
+
+        .auth_buttons {
+            display: flex;
+        }
+
+        .auth_buttons .action_btn {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Product</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="auth_buttons">
+            <a href="#" class="action_btn">Sign up</a>
+            <a href="#" class="action_btn">Login</a>
+        </div>
+        <div class="toggle_btn">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section id="hero">
+        <h1>Welcome to Flash Food Delivery</h1>
+        <p>Hi welcome to our food delivery service<br /></p>
+    </section>
+</main>
+
+</body>
+</html>

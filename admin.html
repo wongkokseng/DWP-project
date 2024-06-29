@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page - Flash Food Delivery</title>
+    <style>
+        /* Your CSS styles here */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #f3f4f6;
+        }
+
+        header {
+            position: relative;
+            padding: 2rem;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center; /* Center text within header */
+        }
+
+        .navbar {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navbar .logo a {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: black;
+            text-decoration: none;
+        }
+
+        .navbar ul {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .navbar ul li {
+            margin-right: 20px;
+        }
+
+        .navbar ul li:last-child {
+            margin-right: 0;
+            text-decoration: underline; /* Add underline */
+        }
+
+        .navbar ul li:last-child a {
+            color: black; /* Restore original color */
+        }
+
+        .navbar ul li a {
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+            transition: color 0.3s ease;
+        }
+
+        .navbar ul li a:hover {
+            color: orange;
+        }
+
+        main {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center; /* Center text within main */
+        }
+
+        h1 {
+            margin-bottom: 1.5rem;
+            font-size: 2.5rem; /* Increased font size */
+            font-family: 'Times New Roman', Times, serif; /* Changed font family */
+        }
+
+        .admin-content {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            font-family: 'Times New Roman', Times, serif; /* Changed font family */
+        }
+
+        .admin-content h2 {
+            margin-bottom: 1rem;
+        }
+
+        .admin-content p {
+            margin-bottom: 1rem;
+        }
+
+        .admin-content button {
+            background-color: orange;
+            color: white;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .admin-content button:hover {
+            background-color: #ff7f0e;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="navbar">
+        <div class="logo">
+            <a href="#">Admin Panel - Flash Food Delivery</a>
+        </div>
+        <ul>
+            <li><a href="#">Orders</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="#">Customers</a></li>
+            <li><a href="#">Log Out</a></li>
+        </ul>
+    </div>
+</header>
+
+<main>
+    <h1>Welcome to the Admin Panel</h1>
+    <div class="admin-content">
+        <p>Here, you can manage your orders, products, customers, and log out.</p>
+    </div>
+</main>
+
+</body>
+</html>
