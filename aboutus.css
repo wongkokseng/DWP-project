@@ -59,13 +59,14 @@ button {
     padding: 13px 30px;
     border-radius: 30px;
     transition: .4s;
+    margin-top: 40px;
 }
 
 button:hover {
-    background: transparent;
-    border: 2px solid #8f0bcc;
+    background:#491e77;
     cursor: pointer;
 }
+
 
 .images-grid {
     display: grid;
