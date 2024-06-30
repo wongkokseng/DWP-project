@@ -3,11 +3,11 @@
     margin: 0;
     font-family: 'Josefin Sans', sans-serif;
     box-sizing: border-box;
+    background-color: #e79f0e;
 }
 
 .about {
     width: 100%;
-    background-color: #e79f0e;
     position: relative;
 }
 
@@ -17,8 +17,9 @@
 }
 
 .about-text {
-    width: 45%; /* 左侧内容区域宽度 */
-    text-align: left; /* 文字左对齐 */
+    width: 45%;
+    text-align: left;
+    margin-bottom: 20px;
 }
 
 .about-text h1 {
@@ -65,27 +66,30 @@ button:hover {
     cursor: pointer;
 }
 
+.images-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 20px; /* Gap between grid items */
+    margin-left: auto; /* Align grid to the right */
+    width: 50%; /* Adjust width as needed */
+}
+
 .image-container {
-    width: 30%; /* 右侧图片区域宽度 */
+    margin-top: 30px;
     position: relative;
-    display: inline-block;
-    margin: 20px;
+    text-align: center;
 }
 
 .small-image {
-    width: 200px; /* 调整图片宽度 */
-    max-height: auto;
+    width: 150px; /* Adjusted image width */
+    height: auto;
     object-fit: cover;
 }
 
 .social-icons {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
     display: flex;
-    justify-content: left;
-    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
 }
 
 .social-icons a {
@@ -99,7 +103,26 @@ button:hover {
 
 .main {
     display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between; /* 将项目分散对齐 */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: flex-start; /* Align items to the top */
 }
+
+.image-container img{
+    max-height: 140px;
+}
+
+@media (max-width: 768px) {
+    .main {
+        flex-direction: column; /* Stack the text and images vertically */
+        align-items: center; /* Center align items */
+    }
+    .about-text {
+        width: 100%; /* Full width for text */
+        text-align: center; /* Center text alignment */
+    }
+    .images-grid {
+        width: 100%; /* Full width for images grid */
+    }
+}
+
+
