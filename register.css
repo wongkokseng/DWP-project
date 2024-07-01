@@ -5,12 +5,8 @@
     box-sizing: border-box;
 }
 body {
-    background-color: #080710;
-}
-<<<<<<< HEAD
-.background {
     background-image: url('background2/19.jpeg');
-    background-size: cover;
+    background-size: auto;
     background-position: center;
     position: fixed;
     top: 0;
@@ -21,41 +17,13 @@ body {
     width: 1900px;
     height: 1900px;
     transform: translate(-50%, -50%);
-=======
-.background{
-    width: 760px;
-    height: 630px;
-    position: absolute;
-    transform: translate(-50%,-50%);
->>>>>>> 217a0368783e0b93e99337e3d36171a51f0009b4
     left: 50%;
     top: 50%;
 }
-.background .shape {
-    height: 200px;
-    width: 200px;
-    position: absolute;
-    border-radius: 50%;
-}
-.shape:first-child {
-    background: linear-gradient(
-        #1845ad,
-        #23a2f6
-    );
-    left: -80px;
-    top: -80px;
-}
-.shape:last-child {
-    background: linear-gradient(
-        to right,
-        #ff512f,
-        #f09819
-    );
-    right: -30px;
-    bottom: -80px;
-}
+
+
 form {
-    height: 900px;
+    height: 600px;
     width: 500px;
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
@@ -66,7 +34,7 @@ form {
     backdrop-filter: blur(10px);
     border: 2px solid rgba(255, 255, 255, 0.1);
     box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-    padding: 50px 35px;
+    padding: 20px 25px;
 }
 form * {
     font-family: 'Poppins', sans-serif;
@@ -77,21 +45,21 @@ form * {
 }
 form h3 {
     font-size: 32px;
-    font-weight: 500;
-    line-height: 42px;
+    font-weight: 500px;
+    line-height: 20px;
     text-align: center;
 }
 
 label {
     display: block;
-    margin-top: 30px;
+    margin-top: 20px;
     font-size: 16px;
     font-weight: 500;
 }
 input {
     display: block;
     height: 50px;
-    width: 100%;
+    width: 95%;
     background-color: rgba(255, 255, 255, 0.07);
     border-radius: 3px;
     padding: 0 10px;
@@ -114,24 +82,19 @@ button {
     cursor: pointer;
 }
 .social {
-    margin-top: 30px;
+    margin-top: 20px;
     display: flex;
 }
 .social div {
-    background: red;
-    width: 150px;
+    width:50%;
     border-radius: 3px;
     padding: 5px 10px 10px 5px;
     background-color: rgba(255, 255, 255, 0.27);
     color: #eaf0fb;
     text-align: center;
+    margin-inline: 20px;
 }
 .social div:hover {
     background-color: rgba(255, 255, 255, 0.47);
-}
-.social .fb {
-    margin-left: 170px;
-}
-.social i {
-    margin-right: 4px;
+    cursor:pointer;
 }
