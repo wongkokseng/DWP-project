@@ -1,14 +1,21 @@
+<?php include('server.php')?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <title>Register</title>
     <link rel="stylesheet" href="register.css">
     <script>
-        function openhomepage
+        function openmainpage() {
+            window.location.href='MainPage.html';
+        }
+        function openlogin(){
+            window.location.href='login.php';
+        }
     </script>
 </head>
 <body>
     <form>
+        <?php include('error.php')?>
         <h3>Register Account</h3>
 
         <label for="username">Username</label>
@@ -25,10 +32,10 @@
         <input type="address1" placeholder="Address " id="address1">
 
 
-        <button>Register</button>
+        <button type="submit" name="reg_user">Register</button>
         <div class="social">
-          <div class="go"><i class="fab fa-google"></i>  Back to start</div>
-          <div class="fb"><i class="fab fa-facebook"></i>  Login</div>
+            <div class="go" onclick="openmainpage()"><i class="fab fa-google"></i>Main Page</div>
+            <div class="fb" onclick="openlogin()"><i class="fab fa-facebook"></i>Login</div>
         </div>
     </form>
 </body>

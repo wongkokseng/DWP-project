@@ -10,7 +10,7 @@
             window.location.href='MainPage.html';
         }
         function openregister(){
-            window.location.href='register.html';
+            window.location.href='register.php';
         }
     </script>
 </head>
