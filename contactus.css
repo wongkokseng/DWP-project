@@ -1,0 +1,101 @@
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('background2/contact.jpeg') no-repeat center center fixed;
+            background-size: cover;
+            height: 100%;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .contact {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align:left;
+            color: #150101;
+        }
+
+        .contact-form, .map-container {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            text-align: center;
+            background-color: rgba(228, 194, 194, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            height: 700px;
+        }
+
+        .contact-form h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .contact-form p {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+        }
+
+        .contact-form{
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+        }
+
+        .contact-form textarea {
+            resize: vertical;
+        }
+
+        .contact-form .btn:hover {
+            background-color: #474155;
+            color: rgb(77, 77, 133);
+        }
+
+        .contact-form .back-home {
+            margin-top: 50px;
+            display: inline-block;
+            text-decoration: none;
+            color: #fff;
+            background-color: #6c61e9;
+            padding: 10px 20px; 
+            border-radius: 5px;
+            font-size: 1.2rem;
+            transition: background-color 0.3s ease;
+            align-self: center;
+        }
+
+        .contact-form .back-home:hover {
+            background-color: #474155;
+            cursor: pointer;
+        }
+
+        .map-container {
+            position: relative;
+        }
+
+        .map-container iframe {
+            width: 90%;
+            height: 500px;
+            border: 0;
+            border-radius: 10px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 50px;
+        }
+
+        .contact-form h2 {
+            font-size: 1.5rem; 
+            text-align: left; 
+        }
+
+        .contact-form p {
+            font-size: 1rem; 
+            text-align: left; 
+            margin-bottom: 15px; 
+        }
