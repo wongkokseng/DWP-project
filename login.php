@@ -31,9 +31,10 @@
 
         <button style="font-family: 'Times New Roman', Times, serif;" type="submit" name="login_user">Log In</button>
         <div class="social">
-          <div class="go" onclick="openmainpage()"><i class="fab fa-google"></i> Main Page</div>
-          <div class="fb" onclick="openregister()"><i class="fab fa-facebook"></i> Register</div>
+          <div onclick="openmainpage()"> Main Page</div>
+          <div onclick="openregister()"> Register</div>
         </div>
+        <p>If you encounter any difficulties,please contact our <a href="contactus.html">customer support</a>.</p>
     </form>
 </body>
 </html>

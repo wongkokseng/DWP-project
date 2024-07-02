@@ -13,16 +13,21 @@ $db = mysqli_connect('localhost', 'root', '', 'accounts');
 if (isset($_POST['reg_user'])) {
   // receive all input values from the form
   $username = mysqli_real_escape_string($db, $_POST['username']);
+  $phone_number = mysqli_real_escape_string($db, $_POST['phone_number']);
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
+  if (empty($phone_number)) { array_push($errors, "Phone number is required"); }
   if (empty($password_1)) { array_push($errors, "Password is required"); }
   if (empty($password_2)) { array_push($errors, "Please write the password again to confirm password"); }
   if ($password_1 != $password_2) {
 	array_push($errors, "The two passwords do not match");
+  }
+  if (!preg_match('/^\d{7,15}$/', $phone_number)) {
+    array_push($errors, "Phone number must be 9 to 15 digits long");
   }
 
   // first check the database to make sure 
@@ -41,8 +46,8 @@ if (isset($_POST['reg_user'])) {
   if (count($errors) == 0) {
   	$password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO customer (username, password) 
-  			  VALUES('$username', '$password')";
+  	$query = "INSERT INTO customer (username, phone_number, password) 
+  			  VALUES('$username', '$phone_number', '$password')";
   	mysqli_query($db, $query);
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
