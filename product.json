@@ -3,85 +3,99 @@
         "id": 1,
         "name": "asam laksa",
         "price": 5.30,
-        "image": "/images/asam laksa.webp"
+        "image": "/images/asam laksa.webp",
+        "description":"A Peranakan noodle dish, paired with sour fish and tamarind-based broth, asam laksa is one of the most iconic Penang dishes."
     },
     {
         "id": 2,
         "name": "banana leaf rice",
         "price": 5.20,
-        "image": "/images/banana leaf rice.jpg"
+        "image": "/images/banana leaf rice.jpg",
+        "description":"test id 2"
     },
     {
         "id": 3,
         "name": "beef rendang",
         "price": 9.50,
-        "image": "/images/beef rendang.jpg"
+        "image": "/images/beef rendang.jpg",
+        "description":"test id 3"
     }
     ,
     {
         "id": 4,
         "name": "char kuey teow",
         "price": 5.50,
-        "image": "/images/Char_Kuey_Teow.jpeg"
+        "image": "/images/Char_Kuey_Teow.jpeg",
+        "description":"test id 4"
     },
     {
         "id": 5,
         "name": "curry laksa",
         "price": 5.50,
-        "image": "/images/Curry-Laksa.jpg"
+        "image": "/images/Curry-Laksa.jpg",
+        "description":"test id 5"
     },
     {
         "id": 6,
         "name": "kaya toast",
         "price": 3.40,
-        "image": "/images/kaya toast.jpg"
+        "image": "/images/kaya toast.jpg",
+        "description":"test id 6"
     },
     {
         "id": 7,
         "name": "maggi mee goreng",
         "price": 3.40,
-        "image": "/images/maggi mee goreng.png"
+        "image": "/images/maggi mee goreng.png",
+        "description":"test id 7"
     },
     {
         "id": 8,
         "name": "murtabak",
         "price": 4.50,
-        "image": "/images/murtabak.jpg"
+        "image": "/images/murtabak.jpg",
+        "description":"test id 8"
     },
     {
         "id": 9,
         "name": "nasi lemak",
         "price": 5.50,
-        "image": "/images/nasi lemak.jpg"
+        "image": "/images/nasi lemak.jpg",
+        "description":"test id 9"
     },
     {
         "id": 10,
         "name": "nasi goreng kampung",
         "price": 5.60,
-        "image": "/images/Nasi_Goreng_Kampung.jpg"
+        "image": "/images/Nasi_Goreng_Kampung.jpg",
+        "description":"test id 10"
     },
     {
         "id": 11,
         "name": "pan mee",
         "price": 6.20,
-        "image": "/images/pan mee.jpg"
+        "image": "/images/pan mee.jpg",
+        "description":"test id 11"
     },
     {
         "id": 12,
         "name": "roti canai",
         "price": 3.30,
-        "image": "/images/Roti-canai.jpg"
+        "image": "/images/Roti-canai.jpg",
+        "description":"test id 12"
     },
     {
         "id": 13,
         "name": "satay",
         "price": 3.50,
-        "image": "/images/satay.jpg"
+        "image": "/images/satay.jpg",
+        "description":"test id 13"
     },
     {
         "id": 14,
         "name": "yong tau foo",
         "price": 6.50,
-        "image": "/images/yong tau foo.jpg"
+        "image": "/images/yong tau foo.jpg",
+        "description":"test id 14"
     }
 ]
