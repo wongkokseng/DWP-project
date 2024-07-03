@@ -62,9 +62,9 @@ body {
     position: absolute;
     right: 0;
     background-color: white;
-    min-width: 170px; /* Expanded width to fit "View Profile" in one line */
+    min-width: 170px; 
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    z-index: 1001; /* Ensures dropdown is above other elements */
+    z-index: 1001; 
 }
 
 .dropdown-content a,
