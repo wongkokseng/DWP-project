@@ -10,12 +10,14 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
+    
+<div class="container">
     <div class="navbar">
         <div class="navbar-brand">Flash Food Delivery</div>
         <div class="navbar-links">
@@ -37,50 +39,50 @@
             </div>
         </div>
     </div>
-    <div class="container">
-        <header>
-            <h1>Choose your food</h1>
-            <div class="iconCart">
-                <img src="/images/icon.png">
-                <div class="totalQuantity">0</div>
-            </div>
-        </header>
+    <div class="checkoutLayout">
+        
+        
+        <div class="returnCart">
+            <a href="/">keep shopping</a>
+            <h1>List Product in Cart</h1>
+            <div class="list">
 
-        <div class="listProduct">
-            <div class="item">
-                <img src="asam laksa.webp" alt="">
-                <h2>CoPilot / Black / Automatic</h2>
-                <div class="price">RM5.30</div>
-                <button>Add To Cart</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="cart">
-        <h2>CART</h2>
-        <div class="listCart">
-            <div class="item">
-                <img src="banana leaf rice.jpg">
-                <div class="content">
-                    <div class="name">CoPilot / Black / Automatic</div>
-                    <div class="price">RM5.20</div>
+                <div class="item">
+                    <img src="asam laksa.webp">
+                    <div class="info">
+                        <div class="name">asam laksa</div>
+                        <div class="price">RM5.3</div>
+                    </div>
+                    <div class="quantity">5</div>
+                    <div class="returnPrice">RM26</div>
                 </div>
-                <div class="quantity">
-                    <button>-</button>
-                    <span class="value">3</span>
-                    <button>+</button>
+
+            </div>
+        </div>
+
+        <div class="right">
+            <h1>Checkout</h1>
+
+            <div class="form">
+        
+            <div class="return">
+                <div class="row">
+                    <div>Total Quantity</div>
+                    <div class="totalQuantity">70</div>
+                </div>
+                <div class="row">
+                    <div>Total Price</div>
+                    <div class="totalPrice">RM500</div>
                 </div>
             </div>
+            <button class="buttonCheckout">PROCEED TO CHECKOUT</button>
         </div>
-        <div class="buttons">
-            <div class="close">CLOSE</div>
-            <div class="checkout">
-                <a href="checkout.php">CHECKOUT</a>
-            </div>
-        </div>
+            
     </div>
+</div>
 
-    <script src="app.js"></script>
+
+<script src="checkout.js"></script>
+
 </body>
 </html>
-

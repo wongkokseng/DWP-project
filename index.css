@@ -111,7 +111,7 @@ a {
 .container {
     width: 1200px;
     margin: auto;
-    max-width: 90%;
+    max-width: 100%;
     transition: transform 1s;
     margin-top: 120px; 
 }
@@ -289,7 +289,7 @@ header .totalQuantity {
 .checkoutLayout {
     display: inline-grid;
     grid-template-columns: 1fr 1fr;
-    gap: 50px;
+    gap: 200px;
     padding: 20px;
     width: auto;
 }
@@ -306,7 +306,7 @@ header .totalQuantity {
 .checkoutLayout .right .return {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
     border-bottom: 1px solid #7a7fe2;
     padding-bottom: 20px;
     margin-bottom: 20px;
