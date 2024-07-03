@@ -98,7 +98,7 @@ if (isset($_POST['login_staff'])) {
   	$query = "SELECT * FROM staff WHERE staff_username='$staff_username' AND staff_password='$staff_password' AND staff_status='active'";
   	$results = mysqli_query($db, $query);
   	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['username'] = $staff_username;
+  	  $_SESSION['admin'] = $staff_username;
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: admin.php');
   	}else {
