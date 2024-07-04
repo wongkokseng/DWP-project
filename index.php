@@ -29,7 +29,7 @@
                     <?php echo $_SESSION['username']; ?>
                 </button>
                 <div class="dropdown-content">
-                    <a href="profile.php">View Profile</a>
+                    <a href="view_profile.php">View Profile</a>
                     <form method="POST" action="logout.php" style="margin: 0;">
                         <input type="hidden" name="action" value="logout">
                         <button type="submit" class="logout-button">Logout</button>
