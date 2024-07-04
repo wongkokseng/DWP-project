@@ -32,11 +32,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     file_put_contents('product.json', json_encode($products, JSON_PRETTY_PRINT));
 
     // Redirect back to the form with a success query parameter
-    header("Location: add_product.html?success=true");
+    header("Location: add_product.php?success=true");
     exit();
 } else {
     // If not a POST request, redirect to the form
-    header("Location: add_product.html");
+    header("Location: add_product.php");
     exit();
 }
 ?>

@@ -10,12 +10,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page - Flash Food Delivery</title>
-    <link rel="stylesheet" href="admin.css"/>
+    <title>Add New Product</title>
+    <link rel="stylesheet" href="add_product.css">
 </head>
 <body>
-<header>
-    <div class="navbar">
+<div class="navbar">
         <div class="logo">
             <a href="admin.php">Admin Panel - Flash Food Delivery</a>
         </div>
@@ -39,14 +38,29 @@
             </div>
         </ul>
     </div>
-</header>
+    <h1>Add New Product</h1>
+    <form action="add_product_processing.php" method="post" enctype="multipart/form-data">
+        <label for="name">Product Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
 
-<main>
-    <h1>Welcome to the Admin Panel</h1>
-    <div class="admin-content">
-        <p>Here, you can manage your orders, products and accounts.</p>
-    </div>
-</main>
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" step="0.01" required><br><br>
 
+        <label for="image">Image:</label>
+        <input type="file" id="image" name="image" accept="image/*" required><br><br>
+
+        <label for="description">Description:</label>
+        <textarea id="description" name="description" required></textarea><br><br>
+
+        <button type="submit">Add Product</button>
+        <button onclick="window.location.href = 'view products.php';">Return</button>
+    </form>
+
+    <script>
+        // Check if the URL has the success query parameter
+        if (window.location.search.includes('success=true')) {
+            alert('Product Added Successfully!');
+        }
+    </script>
 </body>
 </html>

@@ -1,7 +1,7 @@
 <?php 
   session_start(); 
   if (!isset($_SESSION['admin'])) {
-  	header('location: mainpage.html');
+    header('location: mainpage.html');
     exit();
   }
 ?>
@@ -10,12 +10,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Page - Flash Food Delivery</title>
-    <link rel="stylesheet" href="admin.css"/>
+    <title>Add Staff</title>
+    <link rel="stylesheet" href="add staff.css"/>
 </head>
 <body>
-<header>
-    <div class="navbar">
+<div class="navbar">
         <div class="logo">
             <a href="admin.php">Admin Panel - Flash Food Delivery</a>
         </div>
@@ -39,14 +38,27 @@
             </div>
         </ul>
     </div>
-</header>
+    <div class="container">
+        <h1>Add New Staff Member</h1>
+        <form action="add staff process.php" method="post">
+            <label for="staff_username">Username:</label>
+            <input type="text" id="staff_username" name="staff_username" required>
 
-<main>
-    <h1>Welcome to the Admin Panel</h1>
-    <div class="admin-content">
-        <p>Here, you can manage your orders, products and accounts.</p>
+            <label for="staff_password">Password:</label>
+            <input type="password" id="staff_password" name="staff_password" required>
+
+            <label for="staff_status">Status:</label>
+            <select id="staff_status" name="staff_status">
+                <option value="active">Active</option>
+                <option value="inactive">Inactive</option>
+            </select>
+
+            <input type="submit" value="Add Staff">
+        </form>
+        <div class="back-link">
+            <a href="view staff.php">Back to Staff List</a>
+        </div>
     </div>
-</main>
-
 </body>
 </html>
+

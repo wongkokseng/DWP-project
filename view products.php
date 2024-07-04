@@ -2,6 +2,7 @@
   session_start(); 
   if (!isset($_SESSION['admin'])) {
   	header('location: mainpage.html');
+    exit();
   }
 ?>
 <!DOCTYPE html>
@@ -13,15 +14,15 @@
     <link rel="stylesheet" href="view product.css">
 </head>
 <body>
-    <div class="navbar">
+<div class="navbar">
         <div class="logo">
-            <a href="#">Admin Panel - Flash Food Delivery</a>
+            <a href="admin.php">Admin Panel - Flash Food Delivery</a>
         </div>
         <ul>
-            <li><a href="#">Orders</a></li>
-            <li><a href="view_products.html">Products</a></li>
-            <li><a href="#">Customers</a></li>
-            <li><a href="#">Staff</a></li>
+            <li><a href="view order.php">Orders</a></li>
+            <li><a href="view products.php">Products</a></li>
+            <li><a href="view customer.php">Customers</a></li>
+            <li><a href="view_staff.php">Staff</a></li>
             <div class="dropdown">
                 <button class="dropbtn">
                     <img src="images/default profile.png" alt="Profile Picture">
