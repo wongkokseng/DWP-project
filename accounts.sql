@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 04, 2024 at 01:42 PM
+-- Generation Time: Jul 04, 2024 at 03:18 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -55,18 +55,19 @@ CREATE TABLE `order` (
   `order_id` int(11) NOT NULL,
   `customer_name` varchar(50) NOT NULL,
   `order_description` longtext DEFAULT NULL,
-  `Customer_Address` longtext DEFAULT NULL
+  `Customer_Address` longtext DEFAULT NULL,
+  `order_status` enum('processing','delivered','cancelled') NOT NULL DEFAULT 'processing'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `order`
 --
 
-INSERT INTO `order` (`order_id`, `customer_name`, `order_description`, `Customer_Address`) VALUES
-(1, 'alice_smith', 'asam laksa', '12,jalan Melur 3,Taman Seri Alam,85100 Batu Anam,Johor'),
-(2, 'bob_jones', 'beef rendang', '83, Jalan Bukit Beruang Utama 4, Taman Bukit Beruang Utama, 75450 Ayer Keroh, Melaka'),
-(3, 'charlie_brown', 'char kuey teow', '9090, Jalan Padi Mahsuri 1, Taman Bukit Serindit, 75400 Melaka'),
-(4, 'diana_clark', 'curry laksa', '209, Jalan Kenanga 2/17, Taman Kenanga, 75250 Melaka');
+INSERT INTO `order` (`order_id`, `customer_name`, `order_description`, `Customer_Address`, `order_status`) VALUES
+(1, 'alice_smith', 'asam laksa', '12,jalan Melur 3,Taman Seri Alam,85100 Batu Anam,Johor', 'processing'),
+(2, 'bob_jones', 'beef rendang', '83, Jalan Bukit Beruang Utama 4, Taman Bukit Beruang Utama, 75450 Ayer Keroh, Melaka', 'processing'),
+(3, 'charlie_brown', 'char kuey teow', '9090, Jalan Padi Mahsuri 1, Taman Bukit Serindit, 75400 Melaka', 'processing'),
+(4, 'diana_clark', 'curry laksa', '209, Jalan Kenanga 2/17, Taman Kenanga, 75250 Melaka', 'processing');
 
 -- --------------------------------------------------------
 
