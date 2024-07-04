@@ -34,7 +34,7 @@
           <div onclick="openmainpage()"> Main Page</div>
           <div onclick="openregister()"> Register</div>
         </div>
-        <p>If you encounter any difficulties,please contact our <a href="contactus.html">customer support</a>.</p>
+        <p>If you encounter any difficulties,please contact our <a href="Contact Us default.html">customer support</a>.</p>
     </form>
 </body>
 </html>

@@ -48,7 +48,7 @@
                     <h2>Customer Support Email</h2> 
                     <p>Our email is flashdelivery@gmail.com, you may contact us via email to feedback or ask any question related to our business.</p>  
                 </form>
-                <a href="MainPage.html" class="back-home">Back Home</a> 
+                <a href="index.php" class="back-home">Back Home</a> 
             </div>
             <div class="map-container">
                 <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3986.7436995704697!2d102.27353867496792!3d2.249493497730698!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31d1e56b9710cf4b%3A0x66b6b12b75469278!2z6ams5YWt55Sy5aSa5aqS5L2T5aSn5a2m!5e0!3m2!1szh-CN!2smy!4v1718349675886!5m2!1szh-CN!2smy" width="600" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
