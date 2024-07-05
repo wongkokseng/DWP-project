@@ -24,10 +24,10 @@
         <h3 style="font-family: 'Times New Roman', Times, serif;">Login Here</h3>
 
         <label for="username" style="font-family: 'Times New Roman', Times, serif;">Username</label>
-        <input type="text" placeholder="Your name" name="username">
+        <input type="text" placeholder="Your name" name="username" value="<?php echo $username; ?>">
 
         <label for="password" style="font-family: 'Times New Roman', Times, serif;">Password</label>
-        <input type="password" placeholder="Password" name="password">
+        <input type="password" placeholder="Password" name="password" value="<?php echo $password; ?>">
 
         <button style="font-family: 'Times New Roman', Times, serif;" type="submit" name="login_user">Log In</button>
         <div class="social">
