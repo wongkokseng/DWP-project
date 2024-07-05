@@ -11,14 +11,14 @@
         "name": "banana leaf rice",
         "price": 5.20,
         "image": "/images/banana leaf rice.jpg",
-        "description":"test id 2"
+        "description":"Banana leaf rice is a traditional South Indian meal where rice and various side dishes are served on a banana leaf."
     },
     {
         "id": 3,
         "name": "beef rendang",
         "price": 9.50,
         "image": "/images/beef rendang.jpg",
-        "description":"test id 3"
+        "description":"Beef rendang is a rich and tender Indonesian beef stew slow-cooked in coconut milk and spices."
     }
     ,
     {
@@ -26,76 +26,76 @@
         "name": "char kuey teow",
         "price": 5.50,
         "image": "/images/Char_Kuey_Teow.jpeg",
-        "description":"test id 4"
+        "description":"Char kuey teow is a popular Malaysian stir-fried flat rice noodle dish with shrimp, eggs, Chinese sausage, and bean sprouts."
     },
     {
         "id": 5,
         "name": "curry laksa",
         "price": 5.50,
         "image": "/images/Curry-Laksa.jpg",
-        "description":"test id 5"
+        "description":"Curry laksa is a spicy Malaysian noodle soup with coconut milk, curry, and a mix of seafood or chicken."
     },
     {
         "id": 6,
         "name": "kaya toast",
         "price": 3.40,
         "image": "/images/kaya toast.jpg",
-        "description":"test id 6"
+        "description":"Kaya toast is a traditional Singaporean breakfast of toasted bread with kaya, a sweet coconut and egg jam."
     },
     {
         "id": 7,
         "name": "maggi mee goreng",
         "price": 3.40,
         "image": "/images/maggi mee goreng.png",
-        "description":"test id 7"
+        "description":"Maggi mee goreng is a quick Malaysian stir-fried instant noodle dish with vegetables, eggs, and seasonings."
     },
     {
         "id": 8,
         "name": "murtabak",
         "price": 4.50,
         "image": "/images/murtabak.jpg",
-        "description":"test id 8"
+        "description":"Murtabak is a stuffed, savory pancake or flatbread commonly found in the Arabian Peninsula and Southeast Asia."
     },
     {
         "id": 9,
         "name": "nasi lemak",
         "price": 5.50,
         "image": "/images/nasi lemak.jpg",
-        "description":"test id 9"
+        "description":"Nasi lemak is a classic Malaysian dish featuring coconut milk-infused rice served with anchovies, peanuts, boiled egg, cucumber, and spicy sambal."
     },
     {
         "id": 10,
         "name": "nasi goreng kampung",
         "price": 5.60,
         "image": "/images/Nasi_Goreng_Kampung.jpg",
-        "description":"test id 10"
+        "description":"Nasi goreng kampung is a flavorful Indonesian or Malaysian village-style fried rice dish with aromatic spices and often served with anchovies and vegetables."
     },
     {
         "id": 11,
         "name": "pan mee",
         "price": 6.20,
         "image": "/images/pan mee.jpg",
-        "description":"test id 11"
+        "description":"Pan mee is a Malaysian noodle soup dish made with handmade flat noodles served in a clear broth with minced meat, anchovies, mushrooms, and leafy vegetables."
     },
     {
         "id": 12,
         "name": "roti canai",
         "price": 3.30,
         "image": "/images/Roti-canai.jpg",
-        "description":"test id 12"
+        "description":"Roti canai is a popular Malaysian and Singaporean flatbread that is crispy on the outside and soft on the inside, typically served with curry or dhal for dipping."
     },
     {
         "id": 13,
         "name": "satay",
         "price": 3.50,
         "image": "/images/satay.jpg",
-        "description":"test id 13"
+        "description":"Satay is a Southeast Asian dish consisting of skewered and grilled meat, typically chicken, beef, or lamb, served with a peanut sauce and often accompanied by rice cakes or cucumber salad."
     },
     {
         "id": 14,
         "name": "yong tau foo",
         "price": 6.50,
         "image": "/images/yong tau foo.jpg",
-        "description":"test id 14"
+        "description":"Yong tau foo is a Chinese Malaysian dish featuring assorted tofu and vegetables stuffed with a minced fish paste, served in a clear broth or with a savory sauce."
     }
 ]
