@@ -19,16 +19,16 @@
         <h3>Register Account</h3>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="write your name" name="username" value="<?php echo $username; ?>">
+        <input type="text" placeholder="write your name" name="username" >
 
         <label for="phone_number">Phone Number</label>
-        <input type="text" placeholder="Phone Number" name="phone_number" value="<?php echo $phone_number; ?>">
+        <input type="text" placeholder="Phone Number" name="phone_number" >
         
         <label for="password">Password</label>
-        <input type="password" placeholder="Password" name="password_1" value="<?php echo $password_1; ?>">
+        <input type="password" placeholder="Password" name="password_1">
 
         <label for="password">Confirm Password</label>
-        <input type="password" placeholder="Write the password again" name="password_2" value="<?php echo $password_2; ?>">
+        <input type="password" placeholder="Write the password again" name="password_2">
 
         <button type="submit" name="reg_user">Register</button>
         <div class="social">
