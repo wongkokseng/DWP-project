@@ -42,9 +42,9 @@ function addDataToHTML(){
             newProduct.innerHTML = 
            `<img src="${product.image}" alt="">
             <h2>${product.name}</h2>
-            <div class="price">RM${product.price}</div>
+            <div class="price">RM${(product.price).toFixed(2)}</div>
             <button onclick="addCart(${product.id})">Add To Cart</button>
-            <a href="product details.html?id=${product.id}" class="view-details">View Product Details</a>`;
+            <a href="product details.php?id=${product.id}" class="view-details">View Product Details</a>`;
             listProductHTML.appendChild(newProduct);
 
         });
@@ -99,7 +99,7 @@ function addCartToHTML(){
                     `<img src="${product.image}">
                     <div class="content">
                         <div class="name">${product.name}</div>
-                        <div class="price">RM${product.price}</div>
+                        <div class="price">RM${(product.price).toFixed(2)}</div>
                     </div>
                     <div class="quantity">
                         <button onclick="changeQuantity(${product.id}, '-')">-</button>

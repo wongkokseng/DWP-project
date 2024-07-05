@@ -53,7 +53,7 @@
                 <h2>CoPilot / Black / Automatic</h2>
                 <div class="price">RM5.30</div>
                 <button>Add To Cart</button>
-                <a href="product details.html">View Product Details</a>
+                <a href="product details.php">View Product Details</a>
             </div>
         </div>
     </div>
@@ -85,4 +85,3 @@
     <script src="app.js"></script>
 </body>
 </html>
-
