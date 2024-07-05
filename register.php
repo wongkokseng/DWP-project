@@ -19,7 +19,7 @@
         <h3>Register Account</h3>
 
         <label for="username">Username</label>
-        <input type="text" placeholder="Email or Phone" name="username">
+        <input type="text" placeholder="write your name" name="username">
 
         <label for="phone_number">Phone Number</label>
         <input type="text" placeholder="Phone Number" name="phone_number">
