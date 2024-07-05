@@ -14,7 +14,7 @@
     </script>
 </head>
 <body>
-    <form method="post" action="register.php">
+    <form method="post" action="reg_user">
         <?php include('errors.php')?>
         <h3>Register Account</h3>
 
