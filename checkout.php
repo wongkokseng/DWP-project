@@ -22,7 +22,7 @@
     <div class="navbar">
         <div class="navbar-brand">Flash Food Delivery</div>
         <div class="navbar-links">
-            <a href="index.php">Home Page</a>
+            <a href="mainpage.php">Home Page</a>
             <a href="About Us.php">About Us</a>
             <a href="Contact Us.php">Contact Us</a>
             <div class="dropdown">

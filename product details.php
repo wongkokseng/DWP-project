@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="product details style.css">
     <script>
         function openindex(){
-            window.location.href='index.php';
+            window.location.href='mainpage.php';
         }
     </script>
 </head>
@@ -25,7 +25,7 @@
     <div class="navbar">
         <div class="navbar-brand">Flash Food Delivery</div>
         <div class="navbar-links">
-            <a href="index.php">Home Page</a>
+            <a href="mainpage.php">Home Page</a>
             <a href="About Us.php">About Us</a>
             <a href="Contact Us.php">Contact Us</a>
             <div class="dropdown">

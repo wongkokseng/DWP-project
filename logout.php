@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['a
         session_destroy();
         
         // Redirect to the login page for users
-        header("location: mainpage.html");
+        header("location: index.html");
         exit();
     } elseif (isset($_SESSION['admin'])) {
         // Unset 'admin' session variable
@@ -28,7 +28,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['action']) && $_POST['a
         session_destroy();
         
         // Redirect to a default page
-        header("location: mainpage.html");
+        header("location: index.html");
         exit();
     }
 }

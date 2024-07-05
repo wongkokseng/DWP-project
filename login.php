@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="login.css">
     <script>
         function openmainpage() {
-            window.location.href='mainpage.html';
+            window.location.href='index.html';
         }
         function openregister(){
             window.location.href='register.php';

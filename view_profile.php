@@ -15,29 +15,26 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="view_profile.css">
 </head>
 <body>
-    <div class="navbar">
-        <div class="logo">
-            <a href="admin.php">Admin Panel - Flash Food Delivery</a>
-        </div>
-        <ul>
-            <li><a href="view order.php">Orders</a></li>
-            <li><a href="view products.php">Products</a></li>
-            <li><a href="view customer.php">Customers</a></li>
-            <li><a href="view_staff.php">Staff</a></li>
+<div class="navbar">
+        <div class="navbar-brand">Flash Food Delivery</div>
+        <div class="navbar-links">
+            <a href="mainpage.php">Home Page</a>
+            <a href="About Us.php">About Us</a>
+            <a href="Contact Us.php">Contact Us</a>
             <div class="dropdown">
                 <button class="dropbtn">
                     <img src="images/default profile.png" alt="Profile Picture">
-                    <?php echo $_SESSION['admin']; ?>
+                    <?php echo $_SESSION['username']; ?>
                 </button>
                 <div class="dropdown-content">
-                    
+                    <a href="view_profile.php">View Profile</a>
                     <form method="POST" action="logout.php" style="margin: 0;">
                         <input type="hidden" name="action" value="logout">
                         <button type="submit" class="logout-button">Logout</button>
                     </form>
                 </div>
             </div>
-        </ul>
+        </div>
     </div>
     <div class="container">
         <div class="profile-pic">

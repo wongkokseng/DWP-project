@@ -17,7 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
     <script>
         function openhomepage() {
-            window.location.href='index.php';
+            window.location.href='mainpage.php';
         }
     </script>
 </head>
@@ -25,7 +25,7 @@
     <div class="navbar">
         <div class="navbar-brand">Flash Food Delivery</div>
         <div class="navbar-links">
-            <a href="index.php">Home Page</a>
+            <a href="mainpage.php">Home Page</a>
             <a href="About Us.php">About Us</a>
             <a href="Contact Us.php">Contact Us</a>
             <div class="dropdown">
