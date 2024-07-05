@@ -52,6 +52,7 @@ if (isset($_POST['reg_user'])) {
   	$_SESSION['username'] = $username;
   	$_SESSION['success'] = "You are now logged in";
   	header('location: mainpage.php');
+    exit();
   }
 }
 
@@ -75,6 +76,7 @@ if (isset($_POST['login_user'])) {
   	  $_SESSION['username'] = $username;
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: mainpage.php');
+      exit();
   	}else {
   		array_push($errors, "Wrong username/password combination.");
   	}
@@ -101,6 +103,7 @@ if (isset($_POST['login_staff'])) {
   	  $_SESSION['admin'] = $staff_username;
   	  $_SESSION['success'] = "You are now logged in";
   	  header('location: admin.php');
+      exit();
   	}else {
   		array_push($errors, "Wrong username/password combination");
   	}
