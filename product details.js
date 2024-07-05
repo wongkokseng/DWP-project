@@ -16,7 +16,7 @@ function fetchProductDetails(productId) {
 // Function to display product details on the webpage
 function displayProductDetails(product) {
     document.getElementById('productName').textContent = product.name;
-    document.getElementById('productPrice').textContent = `RM${product.price}`;
+    document.getElementById('productPrice').textContent = `RM${(product.price).toFixed(2)}`;
     document.getElementById('productDescription').textContent = product.description;
     document.getElementById('productImg').src = product.image;
 }
