@@ -27,55 +27,11 @@ function getProductIdFromUrl() {
     return parseInt(urlParams.get('id'));
 }
 
-// Function to handle adding product to cart
-function addToCart() {
-    let productId = getProductIdFromUrl();
-    let quantity = parseInt(document.getElementById('quantityInput').value);
-
-    if (isNaN(quantity) || quantity <= 0) {
-        alert('Please enter a valid quantity.');
-        return;
-    }
-
-    let productToAdd = {
-        id: productId,
-        name: document.getElementById('productName').textContent,
-        price: parseFloat(document.getElementById('productPrice').textContent.replace('RM', '')),
-        image: document.getElementById('productImg').src,
-        quantity: quantity
-    };
-
-    let listCart = JSON.parse(getCookie('listCart')) || [];
-    let existingProductIndex = listCart.findIndex(p => p.id === productId);
-
-    if (existingProductIndex !== -1) {
-        listCart[existingProductIndex].quantity += quantity;
-    } else {
-        listCart.push(productToAdd);
-    }
-
-    document.cookie = `listCart=${JSON.stringify(listCart)}; expires=Thu, 31 Dec 2025 23:59:59 UTC; path=/;`;
-
-    updateCartIconQuantity();
-    alert('Product added to cart!');
-}
-
-// Function to update the cart icon with total quantity
-function updateCartIconQuantity() {
-    let listCart = JSON.parse(getCookie('listCart')) || [];
-    let totalQuantity = listCart.reduce((total, product) => total + product.quantity, 0);
-    document.querySelector('.totalQuantity').textContent = totalQuantity;
-}
-
-// Function to retrieve cookie value by name
-function getCookie(name) {
-    const value = `; ${document.cookie}`;
-    const parts = value.split(`; ${name}=`);
-    if (parts.length === 2) return parts.pop().split(';').shift();
-}
-
 // Event listener to call fetchProductDetails when the page loads
 document.addEventListener('DOMContentLoaded', function () {
     let productId = getProductIdFromUrl();
     fetchProductDetails(productId);
+    updateCartIconQuantity();
+    renderCartItems();
 });
+

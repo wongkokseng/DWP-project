@@ -1,3 +1,12 @@
+<?php 
+  session_start(); 
+
+  if (!isset($_SESSION['username'])) {
+  	$_SESSION['msg'] = "You must log in first";
+  	header('location: login.php');
+    exit();
+  }
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,6 +15,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Single Product Page Design</title>
     <link rel="stylesheet" href="product details style.css">
+    <script>
+        function openindex(){
+            window.location.href='index.php';
+        }
+    </script>
 </head>
 <body>
     <div class="navbar">
@@ -29,12 +43,6 @@
             </div>
         </div>
     </div>
-    <header>
-        <div class="iconCart">
-            <img src="/images/icon.png">
-            <div class="totalQuantity">0</div>
-        </div>
-    </header>
     <section class="main-wrap">
         <div class="product">
             <div class="image">
@@ -46,26 +54,8 @@
                     <h3 id="productPrice"></h3>
                     <p id="productDescription"></p>
                 </div>
-                <div class="quantity">
-                    <div class="select-quantity">
-                        <h3>Quantity:</h3>
-                        <input type="number" name="quantity" id="quantityInput" value="1">
-                    </div>
-                </div>
                 <div class="sub-btn">
-                    <button class="submit" onclick="addToCart()">Add to Cart</button>
-                </div>
-            </div>
-        </div>
-        <div class="cart">
-            <h2>CART</h2>
-            <div class="listCart">
-                <!-- Cart items will be dynamically added here -->
-            </div>
-            <div class="buttons">
-                <div class="close">CLOSE</div>
-                <div class="checkout">
-                    <a href="checkout.php">CHECKOUT</a>
+                    <button class="submit" onclick="openindex()">Back to Homepage</button>
                 </div>
             </div>
         </div>
@@ -74,6 +64,7 @@
     <script src="product details.js"></script>
 </body>
 </html>
+
 
 
 
