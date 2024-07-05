@@ -76,7 +76,7 @@
                     <div class="totalPrice">RM500</div>
                 </div>
             </div>
-            <button class="buttonCheckout">PROCEED TO CHECKOUT</button>
+            <a href="payment_form.php" class="buttonCheckout">PROCEED TO CHECKOUT</a>
         </div>
             
     </div>

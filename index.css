@@ -325,6 +325,7 @@ header .totalQuantity {
 }
 
 .buttonCheckout {
+    display: inline-block;
     width: 100%;
     height: 40px;
     border: none;
@@ -333,7 +334,17 @@ header .totalQuantity {
     margin-top: 20px;
     font-weight: bold;
     color: #fff;
-    align-self: center;
+    text-align: center;
+    text-decoration: none; /* Remove underline from links */
+    line-height: 40px; /* Center text vertically */
+}
+
+.buttonCheckout:hover {
+    background-color: #37b39c; /* Darker color on hover */
+}
+
+.buttonCheckout:active {
+    background-color: #2f9e86; /* Even darker color when clicked */
 }
 
 .returnCart h1 {
