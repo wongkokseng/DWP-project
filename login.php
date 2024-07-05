@@ -20,14 +20,14 @@
         <div class="shape"><img src="https://th.bing.com/th/id/OIP.IB8GuX3D2m1QO8Kt-4AKAgHaHa?w=1920&h=1920&rs=1&pid=ImgDetMain" style="height: 200px;"></div>
     </div>
     <form method="post" action="login.php">
-        <?php include("errors.php")?>
+        <?php include("errors.php");?>
         <h3 style="font-family: 'Times New Roman', Times, serif;">Login Here</h3>
 
         <label for="username" style="font-family: 'Times New Roman', Times, serif;">Username</label>
-        <input type="text" placeholder="Your name" name="username" value="<?php echo $username; ?>">
+        <input type="text" placeholder="Your name" name="username">
 
         <label for="password" style="font-family: 'Times New Roman', Times, serif;">Password</label>
-        <input type="password" placeholder="Password" name="password" value="<?php echo $password; ?>">
+        <input type="password" placeholder="Password" name="password">
 
         <button style="font-family: 'Times New Roman', Times, serif;" type="submit" name="login_user">Log In</button>
         <div class="social">

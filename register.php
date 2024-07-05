@@ -15,7 +15,7 @@
 </head>
 <body>
     <form method="post" action="register.php">
-        <?php include('errors.php')?>
+        <?php include('errors.php');?>
         <h3>Register Account</h3>
 
         <label for="username">Username</label>
