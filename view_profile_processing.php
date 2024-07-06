@@ -1,10 +1,6 @@
 <?php
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
-    exit();
-}
 
+// Database connection details
 $servername = "localhost";
 $username = "root";
 $password = "";
@@ -28,6 +24,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $user_data = $result->fetch_assoc();
 
+// Initialize $check_stmt for later use
 $check_stmt = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -49,7 +46,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $update_stmt->bind_param("ssss", $new_username, $new_phone_number, $new_password, $user);
         
         if ($update_stmt->execute()) {
-            $_SESSION['username'] = $new_username; // Update session username
+            // Update session username if username is successfully updated
+            $_SESSION['username'] = $new_username;
             header("Location: view_profile.php?status=success");
             exit();
         } else {
