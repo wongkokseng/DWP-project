@@ -23,17 +23,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insert order data into the database
     $sql = "INSERT INTO `order` (customer_name, order_description, Customer_Address) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    $stmt->bind_param('sss', $username, $order_description, $delivery_address);
-    $stmt->execute();
+
+    if ($stmt) {
+        $stmt->bind_param('sss', $username, $order_description, $delivery_address);
 
         if ($stmt->execute()) {
             echo "Order placed successfully!";
-        } 
-        else {
+            // Redirect to mainpage.php after successful execution
+            header("Location: mainpage.php");
+            exit();
+        } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
-    $stmt->close();
+        $stmt->close();
+    } else {
+        echo "Error: " . $conn->error;
+    }
+
     $conn->close();
 }
 ?>
