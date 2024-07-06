@@ -14,7 +14,7 @@ if ($conn->connect_error) {
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $staff_username = $_POST['staff_username'];
-    $staff_password = password_hash($_POST['staff_password'], PASSWORD_BCRYPT); // Hash the password for security
+    $staff_password = $_POST['staff_password']; 
     $staff_status = $_POST['staff_status'];
 
     $sql = "INSERT INTO staff (staff_username, staff_password, staff_status) VALUES (?, ?, ?)";
