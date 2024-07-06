@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $check_stmt->execute();
     $check_result = $check_stmt->get_result();
 
-    if ($check_result->num_rows == 0) {
+    if ($check_result->num_rows == 1) {
         // Update the user's information
         $update_sql = "UPDATE customer SET username = ?, phone_number = ?, password = ? WHERE username = ?";
         $update_stmt = $conn->prepare($update_sql);
