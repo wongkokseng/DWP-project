@@ -67,10 +67,15 @@ if (!isset($_SESSION['username'])) {
                 <div class="flex">
                     <div class="input-box">
                         <span>Order Description :</span>
-                        <input type="text" name="order_description" id="order_description">
+                       <input  type="text" name="order_description" id="order_description">
                     </div>
                 </div>
-                <button type="button" id="updateOrderDescButton">Update Order Description</button>
+                        <div class="returnCart">
+                    <h2>Cart Items</h2>
+                        <div class="cart-items">
+                    <!-- Cart items will be dynamically added here -->
+                    </div>
+                    </div>
             </div>
         </div>
         <div class="row">

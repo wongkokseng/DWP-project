@@ -1,51 +1,41 @@
-document.addEventListener("DOMContentLoaded", function() {
-    let listCart = [];
-
-    // Function to fetch product data from product.json
-    function fetchProductData() {
-        return fetch('product.json')
-            .then(response => response.json())
-            .then(data => {
-                return data; // Return the parsed JSON data
-            })
-            .catch(error => {
-                console.error('Error fetching product data:', error);
-                return []; // Return an empty array if there's an error
-            });
+// Function to fetch cart data from cookie
+function fetchCartFromCookie() {
+    var cookieValue = document.cookie
+        .split('; ')
+        .find(row => row.startsWith('listCart='));
+    if (cookieValue) {
+        return JSON.parse(cookieValue.split('=')[1]);
+    } else {
+        return []; // Return an empty array if cart cookie is not found
     }
+}
 
-    // Function to initialize the cart from cookie on page load
-    function checkCart() {
-        var cookieValue = document.cookie
-            .split('; ')
-            .find(row => row.startsWith('listCart='));
-        if (cookieValue) {
-            listCart = JSON.parse(cookieValue.split('=')[1]);
+// Function to display cart items (name and quantity) in HTML
+function displayCartItems() {
+    // Fetch cart data from cookie
+    let listCart = fetchCartFromCookie();
+
+    // Select the container where cart items will be displayed
+    let cartItemsContainer = document.querySelector('.cart-items');
+    cartItemsContainer.innerHTML = ''; // Clear existing content
+
+    // Iterate through each product in the cart
+    listCart.forEach(product => {
+        if (product) {
+            // Create a div for each cart item
+            let cartItemDiv = document.createElement('div');
+            cartItemDiv.classList.add('cart-item');
+            cartItemDiv.textContent = `${product.name} - Quantity: ${product.quantity}`;
+
+            // Append the cart item to the container
+            cartItemsContainer.appendChild(cartItemDiv);
         }
-    }
-
-    // Function to update the order description input value
-    function updateOrderDescription() {
-        let orderDescription = Object.values(listCart)
-            .map(product => `${product.name}x${product.quantity}`)
-            .join(', ');
-        document.querySelector("#order_description").value = orderDescription;
-    }
-
-    // Function to handle button click that updates order description
-    function updateOrderDescriptionButtonClick() {
-        updateOrderDescription();
-    }
-
-    // Event listener for the button that updates order description
-    document.getElementById('updateOrderDescButton').addEventListener('click', function(event) {
-        event.preventDefault(); // Prevent form submission
-        updateOrderDescriptionButtonClick();
     });
+}
 
-    // Initialize cart and order description on page load
-    checkCart();
-    updateOrderDescription();
+// Call displayCartItems function when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+    displayCartItems();
 });
 
 
