@@ -21,7 +21,7 @@ include("process_order.php");
 </head>
 <body>
 <div class="container">
-    <form method="POST" action="process_order.php">
+    <form method="post" action="process_order.php">
         <div class="row">
             <div class="column">
                 <h3 class="title">Billing Details</h3>
@@ -74,8 +74,7 @@ include("process_order.php");
             </div>
         </div>
         <input type="hidden" name="order_description" id="order_description">
-        <input type="hidden" name="customer_name" id="customer_name">
-        <button type="button" class="submitbtn" onclick="submitForm()"><b>Submit</b></button>
+        <button type="submit" class="submitbtn" onclick="submitForm()"><b>Submit</b></button>
     </form>
 </div>
 </body>   
