@@ -60,7 +60,7 @@ if (isset($_POST['reg_user'])) {
 if (isset($_POST['login_user'])) {
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
-  alert($username,$password);
+  echo "Query: " . $query . "<br>";
 
   if (empty($username)) {
   	array_push($errors, "Username is required");
