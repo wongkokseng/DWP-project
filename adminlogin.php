@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="container">
-        <form class="login-form">
+        <form class="login-form" method="post" action="adminlogin.php">
             <?php include('errors.php')?>
             <h2>Admin Login</h2>
             <div class="input-group">
