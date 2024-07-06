@@ -1,11 +1,4 @@
 <?php
-session_start();
-
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
-    exit();
-}
 
 $username = $_SESSION['username'];
 $full_name = $_POST['full_name'];
@@ -22,7 +15,7 @@ $cvv = $_POST['cvv'];
 $order_description = $_POST['order_description'];
 
 // Database connection
-$conn = new mysqli('localhost', 'root', '', 'your_database');
+$conn = new mysqli('localhost', 'root', '', 'accounts');
 
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
