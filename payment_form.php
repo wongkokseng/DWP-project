@@ -73,7 +73,7 @@ if (!isset($_SESSION['username'])) {
             </div>
         </div>
         <input type="text" name="order_description" id="order_description">
-        <button type="submit" class="submitbtn" onclick="submitForm()"><b>Submit</b></button>
+        <button type="submit" class="submitbtn" ><b>Submit</b></button>
     </form>
 </div>
 </body>   

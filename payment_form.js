@@ -10,10 +10,17 @@ function checkCart() {
     }
 }
 
-// Execute checkCart when the window loads
-window.onload = checkCart;
+// Populate order description on page load
+function populateOrderDescription() {
+    let orderDescription = listCart.map(product => `${product.name}x${product.quantity}`).join(',');
+    document.querySelector("#order_description").value = orderDescription;
+}
 
-// Validate the form before submission
+window.onload = function() {
+    checkCart();
+    populateOrderDescription();
+};
+
 function validateForm() {
     const form = document.querySelector("form");
     const requiredFields = form.querySelectorAll("[required]");
@@ -26,22 +33,12 @@ function validateForm() {
     return true;
 }
 
-// Construct order description and submit the form
 function submitForm() {
     if (!validateForm()) {
-        return;
+        return false;
     }
 
-    // Construct order description from listCart
-    let orderDescription = listCart
-        .filter(product => product) // Filter out any undefined products
-        .map(product => `${product.name}x${product.quantity}`)
-        .join(',');
-
-    // Set the value of the hidden input
-    document.querySelector("#order_description").value = orderDescription;
-
-    // Submit the form
-    document.querySelector("form").submit();
+    return true; // Allow form submission
 }
+
 
