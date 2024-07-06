@@ -42,14 +42,14 @@
         <header>
             <h1>Choose your food</h1>
             <div class="iconCart">
-                <img src="/images/icon.png">
+                <img src="images/icon.png">
                 <div class="totalQuantity">0</div>
             </div>
         </header>
 
         <div class="listProduct">
             <div class="item">
-                <img src="asam laksa.webp" alt="">
+                <img src="images/asam laksa.webp" alt="">
                 <h2>CoPilot / Black / Automatic</h2>
                 <div class="price">RM5.30</div>
                 <button>Add To Cart</button>
@@ -62,7 +62,7 @@
         <h2>CART</h2>
         <div class="listCart">
             <div class="item">
-                <img src="banana leaf rice.jpg">
+                <img src="images/banana leaf rice.jpg">
                 <div class="content">
                     <div class="name">CoPilot / Black / Automatic</div>
                     <div class="price">RM5.20</div>
