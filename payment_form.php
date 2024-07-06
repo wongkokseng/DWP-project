@@ -39,14 +39,11 @@
                     <input type="text" name="billing_address" placeholder="Your address" required>
                 </div>
                 <label for="city" class="input-label">City :</label>
-                <select id="city" class="city-list" name="city" required>
-                    <option value="" selected disabled>Choose</option>
-                    <!-- Add city options here -->
-                </select>
+                    <input type="text" name="city" placeholder="Segamat" required>
                 <div class="flex">
                     <div class="input-box">
                         <span>State :</span>
-                        <input type="text" name="state" placeholder="Segamat" required>
+                        <input type="text" name="state" placeholder="Johor" required>
                     </div>
                     <div class="input-box">
                         <span>Zip code :</span>
