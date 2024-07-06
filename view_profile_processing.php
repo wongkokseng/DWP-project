@@ -28,6 +28,7 @@ $stmt->execute();
 $result = $stmt->get_result();
 $user_data = $result->fetch_assoc();
 
+$check_stmt = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_username = $_POST['username'];
@@ -71,6 +72,3 @@ if ($check_stmt !== null) {
 
 $conn->close();
 ?>
-
-
-
