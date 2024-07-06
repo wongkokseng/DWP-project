@@ -64,6 +64,13 @@ if (!isset($_SESSION['username'])) {
                         <input type="text" name="cvv" placeholder="123" required>
                     </div>
                 </div>
+                <div class="flex">
+                    <div class="input-box">
+                        <span>Order Description :</span>
+                        <input type="text" name="order_description" id="order_description">
+                    </div>
+                </div>
+                <button type="button" id="updateOrderDescButton">Update Order Description</button>
             </div>
         </div>
         <div class="row">
@@ -72,7 +79,6 @@ if (!isset($_SESSION['username'])) {
                 <input type="text" name="delivery_address" placeholder="Delivery Address" required>
             </div>
         </div>
-        <input type="text" name="order_description" id="order_description">
         <button type="submit" class="submitbtn" ><b>Submit</b></button>
     </form>
 </div>

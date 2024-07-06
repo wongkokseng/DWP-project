@@ -1,44 +1,52 @@
-let listCart = [];
+document.addEventListener("DOMContentLoaded", function() {
+    let listCart = [];
 
-// Check for existing cart in cookies and load it
-function checkCart() {
-    var cookieValue = document.cookie
-        .split('; ')
-        .find(row => row.startsWith('listCart='));
-    if (cookieValue) {
-        listCart = JSON.parse(cookieValue.split('=')[1]);
+    // Function to fetch product data from product.json
+    function fetchProductData() {
+        return fetch('product.json')
+            .then(response => response.json())
+            .then(data => {
+                return data; // Return the parsed JSON data
+            })
+            .catch(error => {
+                console.error('Error fetching product data:', error);
+                return []; // Return an empty array if there's an error
+            });
     }
-}
 
-// Populate order description on page load
-function populateOrderDescription() {
-    let orderDescription = listCart.map(product => `${product.name}x${product.quantity}`).join(',');
-    document.querySelector("#order_description").value = orderDescription;
-}
-
-window.onload = function() {
-    checkCart();
-    populateOrderDescription();
-};
-
-function validateForm() {
-    const form = document.querySelector("form");
-    const requiredFields = form.querySelectorAll("[required]");
-    for (let field of requiredFields) {
-        if (!field.value) {
-            alert("Please fill all required fields.");
-            return false;
+    // Function to initialize the cart from cookie on page load
+    function checkCart() {
+        var cookieValue = document.cookie
+            .split('; ')
+            .find(row => row.startsWith('listCart='));
+        if (cookieValue) {
+            listCart = JSON.parse(cookieValue.split('=')[1]);
         }
     }
-    return true;
-}
 
-function submitForm() {
-    if (!validateForm()) {
-        return false;
+    // Function to update the order description input value
+    function updateOrderDescription() {
+        let orderDescription = Object.values(listCart)
+            .map(product => `${product.name}x${product.quantity}`)
+            .join(', ');
+        document.querySelector("#order_description").value = orderDescription;
     }
 
-    return true; // Allow form submission
-}
+    // Function to handle button click that updates order description
+    function updateOrderDescriptionButtonClick() {
+        updateOrderDescription();
+    }
+
+    // Event listener for the button that updates order description
+    document.getElementById('updateOrderDescButton').addEventListener('click', function(event) {
+        event.preventDefault(); // Prevent form submission
+        updateOrderDescriptionButtonClick();
+    });
+
+    // Initialize cart and order description on page load
+    checkCart();
+    updateOrderDescription();
+});
+
 
 
