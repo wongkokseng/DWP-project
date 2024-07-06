@@ -7,7 +7,7 @@
     exit();
   }
 
-  $username = $_SESSION['username'];
+include("process_order.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
