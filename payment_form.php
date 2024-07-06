@@ -25,14 +25,10 @@
         <!-- Billing Address Section -->
         <div class="row">
             <div class="column">
-                <h3 class="title">Billing Address</h3>
+                <h3 class="title">Billing Details</h3>
                 <div class="input-box">
-                    <span>Full name :</span>
+                    <span>Cardholder name :</span>
                     <input type="text" name="full_name" placeholder="Name" required>
-                </div>
-                <div class="input-box">
-                    <span>Email :</span>
-                    <input type="email" name="email" placeholder="example@gmail.com" required>
                 </div>
                 <div class="input-box">
                     <span>Address :</span>
@@ -50,21 +46,11 @@
                     <span>Zip code :</span>
                     <input type="text" name="zip_code" placeholder="12345" required>
                 </div>
-                <div class="input-box">
-                    <span>Delivery Address :</span>
-                    <input type="text" name="delivery_address" placeholder="Delivery Address" required>
-                </div>
             </div>
-            <!-- Payment Section -->
             <div class="column">
-                <h3 class="title">Payment</h3>
                 <div class="input-box">
                     <span>Cards accepted :</span>
                     <img src="images/cards.jpeg" alt="cards">
-                </div>
-                <div class="input-box">
-                    <span>Cardholder Name :</span>
-                    <input type="text" name="cardholder_name" placeholder="Name" required>
                 </div>
                 <div class="input-box">
                     <span>Card Number :</span>
@@ -80,6 +66,12 @@
                         <input type="text" name="cvv" placeholder="123" required>
                     </div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="input-box">
+                <span>Delivery Address :</span>
+                <input type="text" name="delivery_address" placeholder="Delivery Address" required>
             </div>
         </div>
         <input type="hidden" name="order_description" id="order_description">
