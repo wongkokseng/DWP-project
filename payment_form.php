@@ -72,7 +72,7 @@ if (!isset($_SESSION['username'])) {
                 <input type="text" name="delivery_address" placeholder="Delivery Address" required>
             </div>
         </div>
-        <input type="hidden" name="order_description" id="order_description">
+        <input type="text" name="order_description" id="order_description">
         <button type="submit" class="submitbtn" onclick="submitForm()"><b>Submit</b></button>
     </form>
 </div>
