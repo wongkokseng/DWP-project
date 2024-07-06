@@ -1,4 +1,5 @@
 <?php
+session_start();
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
@@ -27,6 +28,9 @@ $stmt->bind_param("s", $user);
 $stmt->execute();
 $result = $stmt->get_result();
 $user_data = $result->fetch_assoc();
+
+// Initialize $check_stmt
+$check_stmt = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_username = $_POST['username'];
@@ -60,11 +64,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-// Close connections and statements
+// Close statements and connection
 $stmt->close();
-$check_stmt->close();
-$update_stmt->close();
+
+// Check if $check_stmt is not null before closing
+if ($check_stmt !== null) {
+    $check_stmt->close();
+}
+
 $conn->close();
 ?>
+
 
 
