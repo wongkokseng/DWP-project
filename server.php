@@ -17,6 +17,13 @@ if (isset($_POST['reg_user'])) {
   $password_1 = mysqli_real_escape_string($db, $_POST['password_1']);
   $password_2 = mysqli_real_escape_string($db, $_POST['password_2']);
 
+  // Debugging output
+  echo "Register User:<br>";
+  echo "Username: " . $username . "<br>";
+  echo "Phone Number: " . $phone_number . "<br>";
+  echo "Password 1: " . $password_1 . "<br>";
+  echo "Password 2: " . $password_2 . "<br>";
+
   // form validation: ensure that the form is correctly filled ...
   // by adding (array_push()) corresponding error unto $errors array
   if (empty($username)) { array_push($errors, "Username is required"); }
@@ -24,7 +31,7 @@ if (isset($_POST['reg_user'])) {
   if (empty($password_1)) { array_push($errors, "Password is required"); }
   if (empty($password_2)) { array_push($errors, "Please write the password again to confirm password"); }
   if ($password_1 != $password_2) {
-	array_push($errors, "The two passwords do not match");
+    array_push($errors, "The two passwords do not match");
   }
   if (!preg_match('/^\d{7,15}$/', $phone_number)) {
     array_push($errors, "Phone number must be 9 to 15 digits long");
@@ -44,15 +51,23 @@ if (isset($_POST['reg_user'])) {
 
   // Finally, register user if there are no errors in the form
   if (count($errors) == 0) {
-  	$password = md5($password_1);//encrypt the password before saving in the database
+    $password = md5($password_1);//encrypt the password before saving in the database
 
-  	$query = "INSERT INTO customer (username, phone_number, password) 
-  			  VALUES('$username', '$phone_number', '$password')";
-  	mysqli_query($db, $query);
-  	$_SESSION['username'] = $username;
-  	$_SESSION['success'] = "You are now logged in";
-  	header('location: mainpage.php');
+    $query = "INSERT INTO customer (username, phone_number, password) 
+              VALUES('$username', '$phone_number', '$password')";
+    mysqli_query($db, $query);
+
+    echo "Query: " . $query . "<br>";
+
+    $_SESSION['username'] = $username;
+    $_SESSION['success'] = "You are now logged in";
+    header('location: mainpage.php');
     exit();
+  } else {
+    echo "Errors: <br>";
+    foreach ($errors as $error) {
+      echo $error . "<br>";
+    }
   }
 }
 
@@ -60,27 +75,39 @@ if (isset($_POST['reg_user'])) {
 if (isset($_POST['login_user'])) {
   $username = mysqli_real_escape_string($db, $_POST['username']);
   $password = mysqli_real_escape_string($db, $_POST['password']);
-  echo "Query: " . $query . "<br>";
+
+  // Debugging output
+  echo "Login User:<br>";
+  echo "Username: " . $username . "<br>";
+  echo "Password: " . $password . "<br>";
 
   if (empty($username)) {
-  	array_push($errors, "Username is required");
+    array_push($errors, "Username is required");
   }
   if (empty($password)) {
-  	array_push($errors, "Password is required");
+    array_push($errors, "Password is required");
   }
 
   if (count($errors) == 0) {
-  	$password = md5($password);
-  	$query = "SELECT * FROM customer WHERE username='$username' AND password='$password' AND status='active'";
-  	$results = mysqli_query($db, $query);
-  	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['username'] = $username;
-  	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: mainpage.php');
+    $password = md5($password);
+    $query = "SELECT * FROM customer WHERE username='$username' AND password='$password' AND status='active'";
+    $results = mysqli_query($db, $query);
+
+    echo "Query: " . $query . "<br>";
+
+    if (mysqli_num_rows($results) == 1) {
+      $_SESSION['username'] = $username;
+      $_SESSION['success'] = "You are now logged in";
+      header('location: mainpage.php');
       exit();
-  	}else {
-  		array_push($errors, "Wrong username/password combination.");
-  	}
+    } else {
+      array_push($errors, "Wrong username/password combination.");
+    }
+  } else {
+    echo "Errors: <br>";
+    foreach ($errors as $error) {
+      echo $error . "<br>";
+    }
   }
 }
 
@@ -89,25 +116,38 @@ if (isset($_POST['login_staff'])) {
   $staff_username = mysqli_real_escape_string($db, $_POST['staff_username']);
   $staff_password = mysqli_real_escape_string($db, $_POST['staff_password']);
 
+  // Debugging output
+  echo "Login Staff:<br>";
+  echo "Staff Username: " . $staff_username . "<br>";
+  echo "Staff Password: " . $staff_password . "<br>";
+
   if (empty($staff_username)) {
-  	array_push($errors, "Username is required");
+    array_push($errors, "Username is required");
   }
   if (empty($staff_password)) {
-  	array_push($errors, "Password is required");
+    array_push($errors, "Password is required");
   }
 
   if (count($errors) == 0) {
-  	$staff_password = md5($staff_password);
-  	$query = "SELECT * FROM staff WHERE staff_username='$staff_username' AND staff_password='$staff_password' AND staff_status='active'";
-  	$results = mysqli_query($db, $query);
-  	if (mysqli_num_rows($results) == 1) {
-  	  $_SESSION['admin'] = $staff_username;
-  	  $_SESSION['success'] = "You are now logged in";
-  	  header('location: admin.php');
+    $staff_password = md5($staff_password);
+    $query = "SELECT * FROM staff WHERE staff_username='$staff_username' AND staff_password='$staff_password' AND staff_status='active'";
+    $results = mysqli_query($db, $query);
+
+    echo "Query: " . $query . "<br>";
+
+    if (mysqli_num_rows($results) == 1) {
+      $_SESSION['admin'] = $staff_username;
+      $_SESSION['success'] = "You are now logged in";
+      header('location: admin.php');
       exit();
-  	}else {
-  		array_push($errors, "Wrong username/password combination");
-  	}
+    } else {
+      array_push($errors, "Wrong username/password combination.");
+    }
+  } else {
+    echo "Errors: <br>";
+    foreach ($errors as $error) {
+      echo $error . "<br>";
+    }
   }
 }
 
