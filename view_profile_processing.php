@@ -20,7 +20,7 @@ if ($conn->connect_error) {
 }
 
 $user = $_SESSION['username'];
-$sql = "SELECT * FROM customer WHERE username = $_SESSION['username']";
+$sql = "SELECT * FROM customer WHERE username = $user";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $user);
 $stmt->execute();
@@ -30,10 +30,10 @@ $user_data = $result->fetch_assoc();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_username = $_POST['username'];
     $new_phone_number = $_POST['phone_number'];
-    $new_password = password_hash($_POST['password'], PASSWORD_BCRYPT);
+    $new_password = $_POST['password'];
 
     // Check if the new username already exists
-    $check_sql = "SELECT * FROM customer WHERE username = $_SESSION['username'] AND username != ($_SESSION['username'])";
+    $check_sql = "SELECT * FROM customer WHERE username = $user AND username != $user";
     $check_stmt = $conn->prepare($check_sql);
     $check_stmt->bind_param("ss", $new_username, $user);
     $check_stmt->execute();
@@ -41,7 +41,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($check_result->num_rows == 0) {
         // Update the user's information
-        $update_sql = "UPDATE customer SET username = $new_username, phone_number = $new_phone_number, password = $new_password WHERE username = $_SESSION['username']";
+        $update_sql = "UPDATE customer SET username = $new_username, phone_number = $new_phone_number, password = $new_password WHERE username = $user";
         $update_stmt = $conn->prepare($update_sql);
         $update_stmt->bind_param("ssss", $new_username, $new_phone_number, $new_password, $user);
         
