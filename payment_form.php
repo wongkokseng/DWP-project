@@ -22,7 +22,6 @@ include("process_order.php");
 <body>
 <div class="container">
     <form method="POST" action="process_order.php">
-        <!-- Billing Address Section -->
         <div class="row">
             <div class="column">
                 <h3 class="title">Billing Details</h3>

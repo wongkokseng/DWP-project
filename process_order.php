@@ -22,7 +22,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Insert order data into the database
     $sql = "INSERT INTO `order` (customer_name, order_description, Customer_Address) VALUES (?, ?, ?)";
-
     $stmt = $conn->prepare($sql);
     if ($stmt) {
         $stmt->bind_param('sss', $username, $order_description, $delivery_address);
