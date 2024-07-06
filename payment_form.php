@@ -38,19 +38,18 @@
                     <span>Address :</span>
                     <input type="text" name="billing_address" placeholder="Your address" required>
                 </div>
-                <label for="city" class="input-label">City :</label>
+                <div class="input-box">
+                    <span>City :</span>
                     <input type="text" name="city" placeholder="Segamat" required>
-                <div class="flex">
-                    <div class="input-box">
-                        <span>State :</span>
-                        <input type="text" name="state" placeholder="Johor" required>
-                    </div>
-                    <div class="input-box">
-                        <span>Zip code :</span>
-                        <input type="text" name="zip_code" placeholder="12345" required>
-                    </div>
                 </div>
-                <!-- New Delivery Address Field -->
+                <div class="input-box">
+                    <span>State :</span>
+                    <input type="text" name="state" placeholder="Johor" required>
+                </div>
+                <div class="input-box">
+                    <span>Zip code :</span>
+                    <input type="text" name="zip_code" placeholder="12345" required>
+                </div>
                 <div class="input-box">
                     <span>Delivery Address :</span>
                     <input type="text" name="delivery_address" placeholder="Delivery Address" required>
