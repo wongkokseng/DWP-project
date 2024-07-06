@@ -33,17 +33,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_password = $_POST['password'];
 
     // Check if the new username already exists
-    $check_sql = "SELECT * FROM customer WHERE username = ? AND username != ?";
+    $check_sql = "SELECT username FROM customer WHERE username = ?";
     $check_stmt = $conn->prepare($check_sql);
-    $check_stmt->bind_param("ss", $new_username, $user);
+    $check_stmt->bind_param("s", $new_username);
     $check_stmt->execute();
     $check_result = $check_stmt->get_result();
 
-    if ($check_result->num_rows == 1) {
+    if ($check_result->num_rows == 0) {
         // Update the user's information
         $update_sql = "UPDATE customer SET username = ?, phone_number = ?, password = ? WHERE username = ?";
         $update_stmt = $conn->prepare($update_sql);
         $update_stmt->bind_param("ssss", $new_username, $new_phone_number, $new_password, $user);
+        $update_stmt->execute();
         
         if ($update_stmt->execute()) {
             // Update session username if username is successfully updated
