@@ -4,6 +4,7 @@ if (!isset($_SESSION['username'])) {
     header('Location: login.php'); // Redirect to login if not logged in
     exit();
 }
+include("view_profile_processing.php");
 ?>
 
 <!DOCTYPE html>
@@ -13,6 +14,7 @@ if (!isset($_SESSION['username'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Profile</title>
     <link rel="stylesheet" href="view_profile.css">
+
 </head>
 <body>
 <div class="navbar">
