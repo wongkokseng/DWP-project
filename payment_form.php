@@ -28,7 +28,7 @@ include("process_order.php");
                 <h3 class="title">Billing Details</h3>
                 <div class="input-box">
                     <span>Cardholder name :</span>
-                    <input type="text" name="full_name" placeholder="Name" required>
+                    <input type="text" name="cardholder_name" placeholder="Name" required>
                 </div>
                 <div class="input-box">
                     <span>Address :</span>

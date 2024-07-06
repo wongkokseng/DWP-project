@@ -1,17 +1,16 @@
 <?php
 
 $username = $_SESSION['username'];
-$full_name = $_POST['full_name'];
-$email = $_POST['email'];
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+$cardholder_name = $_POST['cardholder_name'];
 $billing_address = $_POST['billing_address'];
-$delivery_address = $_POST['delivery_address'];
+$city = $_POST['city'];
 $state = $_POST['state'];
 $zip_code = $_POST['zip_code'];
-$city = $_POST['city'];
-$cardholder_name = $_POST['cardholder_name'];
 $card_number = $_POST['card_number'];
 $exp_date = $_POST['exp_date'];
 $cvv = $_POST['cvv'];
+$delivery_address = $_POST['delivery_address'];
 $order_description = $_POST['order_description'];
 
 // Database connection
@@ -22,7 +21,7 @@ if ($conn->connect_error) {
 }
 
 // Insert order data into the database
-$sql = "INSERT INTO `order` (customer_name, order_description, Customer_Address, order_status) VALUES (?, ?, ?, 'processing')";
+$sql = "INSERT INTO `order` (customer_name, order_description, Customer_Address) VALUES (?, ?, ?)";
 
 $stmt = $conn->prepare($sql);
 $stmt->bind_param('sss', $username, $order_description, $delivery_address);
@@ -32,7 +31,7 @@ if ($stmt->execute()) {
 } else {
     echo "Error: " . $sql . "<br>" . $conn->error;
 }
-
+}
 $stmt->close();
 $conn->close();
 ?>
