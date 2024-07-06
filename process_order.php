@@ -23,20 +23,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Insert order data into the database
     $sql = "INSERT INTO `order` (customer_name, order_description, Customer_Address) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
-    if ($stmt) {
-        $stmt->bind_param('sss', $username, $order_description, $delivery_address);
+    $stmt->bind_param('sss', $username, $order_description, $delivery_address);
+    $stmt->execute();
 
         if ($stmt->execute()) {
             echo "Order placed successfully!";
-        } else {
+        } 
+        else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
 
-        $stmt->close();
-    } else {
-        echo "Error: " . $conn->error;
-    }
-
+    $stmt->close();
     $conn->close();
 }
 ?>
