@@ -64,7 +64,7 @@ include("view_profile_processing.php");
                 <input type="text" id="phone_number" name="phone_number" value="<?php echo htmlspecialchars($user_data['phone_number']); ?>" required>
                 
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" value="<?php echo htmlspecialchars($user_data['password']); ?>" required>
                 
                 <input type="submit" value="Update Profile">
             </form>
