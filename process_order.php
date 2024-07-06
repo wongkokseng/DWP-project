@@ -1,6 +1,7 @@
 <?php
 
 $username = $_SESSION['username'];
+$stmt=null;
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $cardholder_name = $_POST['cardholder_name'];
 $billing_address = $_POST['billing_address'];
