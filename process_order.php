@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 $username = $_SESSION['username'];
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $cardholder_name = $_POST['cardholder_name'];
