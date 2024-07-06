@@ -3,7 +3,7 @@ session_start();
 if (!isset($_SESSION['username'])) {
     $_SESSION['msg'] = "You must log in first";
     header('location: login.php');
-  exit();
+    exit();
 }
 
 $servername = "localhost";
@@ -20,7 +20,9 @@ if ($conn->connect_error) {
 }
 
 $user = $_SESSION['username'];
-$sql = "SELECT * FROM customer WHERE username = $user";
+
+// Select user data
+$sql = "SELECT * FROM customer WHERE username = ?";
 $stmt = $conn->prepare($sql);
 $stmt->bind_param("s", $user);
 $stmt->execute();
@@ -33,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_password = $_POST['password'];
 
     // Check if the new username already exists
-    $check_sql = "SELECT * FROM customer WHERE username = $user AND username != $user";
+    $check_sql = "SELECT * FROM customer WHERE username = ? AND username != ?";
     $check_stmt = $conn->prepare($check_sql);
     $check_stmt->bind_param("ss", $new_username, $user);
     $check_stmt->execute();
@@ -41,7 +43,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($check_result->num_rows == 0) {
         // Update the user's information
-        $update_sql = "UPDATE customer SET username = $new_username, phone_number = $new_phone_number, password = $new_password WHERE username = $user";
+        $update_sql = "UPDATE customer SET username = ?, phone_number = ?, password = ? WHERE username = ?";
         $update_stmt = $conn->prepare($update_sql);
         $update_stmt->bind_param("ssss", $new_username, $new_phone_number, $new_password, $user);
         
@@ -58,5 +60,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit();
     }
 }
+
+// Close connections and statements
+$stmt->close();
+$check_stmt->close();
+$update_stmt->close();
+$conn->close();
 ?>
+
 
