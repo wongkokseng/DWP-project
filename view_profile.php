@@ -4,8 +4,8 @@ if (!isset($_SESSION['username'])) {
     header('Location: login.php'); // Redirect to login if not logged in
     exit();
 }
-include("view_profile_processing.php");
 ?>
+<?php include("view_profile_processing.php")?>
 
 <!DOCTYPE html>
 <html lang="en">
