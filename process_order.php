@@ -40,7 +40,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     // Insert order data into the database
-    $sql = "INSERT INTO `order` (customer_name, order_description, Customer_Address) VALUES (?, ?, ?)";
+    $sql = "INSERT INTO order (customer_name, order_description, Customer_Address) VALUES (?, ?, ?)";
     $stmt = $conn->prepare($sql);
 
     if ($stmt) {
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         if ($stmt->execute()) {
             // Insert data into the transaction table
-            $tran_sql = "INSERT INTO `transaction` (Acc_ID, cardholder_name, billing_address, city, state, zip_code, card_number, exp_date, cvv) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+            $tran_sql = "INSERT INTO transaction (Acc_ID, cardholder_name, billing_address, city, state, zip_code, card_number, exp_date, cvv) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
             $tran_stmt = $conn->prepare($tran_sql);
 
             if ($tran_stmt) {
