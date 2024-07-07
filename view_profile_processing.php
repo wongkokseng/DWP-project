@@ -46,6 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         header("Location: view_profile.php?status=error");
         exit();
     }
+}
 
 // Close statements and connection
 $stmt->close();
