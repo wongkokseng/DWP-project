@@ -31,9 +31,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_phone_number = $_POST['phone_number'];
     $new_password = $_POST['password'];
 
-    
     // Update the user's information
-    $update_sql = "UPDATE customer SET phone_number = ?, password = ? WHERE username = ?";
+    $update_sql = "UPDATE customer SET phone_number = ?, password = ? WHERE username = ?;";
     $update_stmt = $conn->prepare($update_sql);
     $update_stmt->bind_param("sss", $new_phone_number, $new_password, $user);
         
