@@ -73,7 +73,7 @@
                         echo "<td>" . $row["order_id"] . "</td>";
                         echo "<td>" . $row["customer_name"] . "</td>";
                         echo "<td>" . $row["order_description"] . "</td>";
-                        echo "<td>" . $row["customer_address"] . "</td>";
+                        echo "<td>" . $row["Customer_Address"] . "</td>";
                         echo "<td>" . $row["order_status"] . "</td>";
                         echo "<td>";
                         echo "<form method='post' action=''>";
