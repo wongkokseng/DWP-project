@@ -28,38 +28,24 @@ $user_data = $result->fetch_assoc();
 $check_stmt = null;
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $new_username = $_POST['username'];
     $new_phone_number = $_POST['phone_number'];
     $new_password = $_POST['password'];
 
-    // Check if the new username already exists
-    $check_sql = "SELECT username FROM customer WHERE username = ?";
-    $check_stmt = $conn->prepare($check_sql);
-    $check_stmt->bind_param("s", $new_username);
-    $check_stmt->execute();
-    $check_result = $check_stmt->get_result();
-
-    if ($check_result->num_rows == 0) {
-        // Update the user's information
-        $update_sql = "UPDATE customer SET username = ?, phone_number = ?, password = ? WHERE username = ?";
-        $update_stmt = $conn->prepare($update_sql);
-        $update_stmt->bind_param("ssss", $new_username, $new_phone_number, $new_password, $user);
-        $update_stmt->execute();
+    
+    // Update the user's information
+    $update_sql = "UPDATE customer SET phone_number = ?, password = ? WHERE username = ?";
+    $update_stmt = $conn->prepare($update_sql);
+    $update_stmt->bind_param("sss", $new_phone_number, $new_password, $user);
+    $update_stmt->execute();
         
-        if ($update_stmt->execute()) {
-            // Update session username if username is successfully updated
-            $_SESSION['username'] = $new_username;
-            header("Location: view_profile.php?status=success");
-            exit();
-        } else {
-            header("Location: view_profile.php?status=error");
-            exit();
-        }
+    if ($update_stmt->execute()) {
+    // Update session username if username is successfully updated
+    header("Location: view_profile.php?status=success");
+        exit();
     } else {
-        header("Location: view_profile.php?status=username_exists");
+        header("Location: view_profile.php?status=error");
         exit();
     }
-}
 
 // Close statements and connection
 $stmt->close();
