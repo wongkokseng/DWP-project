@@ -73,7 +73,7 @@ include("process_order.php");
                     </div>
                 </div>
                         <div class="returnCart">
-                    <h2>Cart Items(paste into order description)</h2>
+                    <h3>Cart Items(paste into order description)</h3>
                         <div class="cart-items">
                     <!-- Cart items will be dynamically added here -->
                     </div>
