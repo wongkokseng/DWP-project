@@ -6,6 +6,8 @@ if (!isset($_SESSION['username'])) {
     header('location: login.php');
     exit();
 }
+
+include("process_order.php");
 ?>
 
 <!DOCTYPE html>

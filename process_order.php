@@ -1,15 +1,10 @@
 <?php
-session_start(); // Ensure session is started
-
-if (!isset($_SESSION['username'])) {
-    $_SESSION['msg'] = "You must log in first";
-    header('location: login.php');
-    exit();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_SESSION['username']; // Ensure $_SESSION['username'] is correctly set
-
     $cardholder_name = $_POST['cardholder_name'];
     $billing_address = $_POST['billing_address'];
     $city = $_POST['city'];
