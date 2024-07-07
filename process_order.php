@@ -3,8 +3,8 @@ if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_SESSION['username']; // Ensure $_SESSION['username'] is correctly set
+if ($_SERVER["REQUEST_METHOD"] == "POST") {  
+    $username = $_SESSION['username'];
     $cardholder_name = $_POST['cardholder_name'];
     $billing_address = $_POST['billing_address'];
     $city = $_POST['city'];
@@ -77,8 +77,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $conn->close();
-} else {
-    echo "Invalid request"; // Add error handling for invalid requests
 }
 ?>
 
