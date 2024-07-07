@@ -20,7 +20,6 @@
         </div>
         <ul>
             <li><a href="view order.php">Orders</a></li>
-            <li><a href="view products.php">Products</a></li>
             <li><a href="view customer.php">Customers</a></li>
             <li><a href="view_staff.php">Staff</a></li>
             <div class="dropdown">
